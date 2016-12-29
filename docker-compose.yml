@@ -1,0 +1,43 @@
+version: '2'
+services:
+  web:
+      image: nginx:latest
+      ports:
+          - "80:80"
+      volumes:
+          - .:/code/
+          - ./docker/web.conf:/etc/nginx/conf.d/site.conf
+      links:
+          - php
+      #environment:
+
+  php:
+      build: docker/app
+      #image: php:7.0-fpm
+      links:
+          - mysql
+          - mailcatcher
+          - redis
+      volumes:
+          - .:/code/
+          - ./docker/app/php.ini:/usr/local/etc/php/php.ini
+
+  mysql:
+      image: mysql:5.7
+      ports:
+          - "3306:3306"
+      environment:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE:      bmadrupal
+          MYSQL_USER:          bmadrupal
+          MYSQL_PASSWORD:      bmadrupal
+
+  mailcatcher:
+      image: jeanberu/mailcatcher
+      ports:
+          - "1080:1080"
+
+  redis:
+      image: redis:3.2-alpine
+      ports:
+          - "6379:6379"
