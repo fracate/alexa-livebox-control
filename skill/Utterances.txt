@@ -1,0 +1,19 @@
+TurnOnTV turn on
+TurnOnTV to turn on
+TurnOnTV to start
+TurnOnTV start
+
+TurnOffTV turn off
+TurnOffTV to turn off
+TurnOffTV to stop
+TurnOffTV stop
+
+ChangeChannel channel {Channel}
+ChangeChannel change channel {Channel}
+ChangeChannel go to {Channel}
+
+GetTVState is the livebox on
+GetTVState give the livebox state
+
+ChangeVolume volume {Direction} {Value}
+ChangeVolume sound {Direction} {Value}
