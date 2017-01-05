@@ -1,0 +1,7 @@
+var config = {
+    appid: "amzn1.ask.skill.##################",
+    host : "###################",
+    port : "80"
+};
+
+module.exports = config;

@@ -1,0 +1,21 @@
+{
+  "name": "artshee-control",
+  "version": "1.0.0",
+  "description": "Alexa home control",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "alexa",
+    "skill",
+    "fact"
+  ],
+  "author": "Guillaume Moigneu",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "alexa-sdk": "^1.0.6",
+    "http": "0.0.0",
+    "request": "^2.79.0"
+  }
+}
