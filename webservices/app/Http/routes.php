@@ -26,3 +26,11 @@ $app->get('/livebox/turnoff', [
 $app->get('/livebox/state', [
     'uses' => 'LiveboxPlayController@getState'
 ]);
+
+$app->get('/livebox/channel/{channel}', [
+    'uses' => 'LiveboxPlayController@changeChannel'
+]);
+
+$app->get('/livebox/volume/{direction}/{value}', [
+    'uses' => 'LiveboxPlayController@changeVolume'
+]);

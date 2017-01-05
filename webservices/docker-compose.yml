@@ -14,10 +14,10 @@ services:
   php:
       build: docker/app
       #image: php:7.0-fpm
-      links:
+      #links:
       #    - mysql
-          - mailcatcher
-          - redis
+      #    - mailcatcher
+      #    - redis
       volumes:
           - .:/code/
           - ./docker/app/php.ini:/usr/local/etc/php/php.ini
@@ -32,12 +32,12 @@ services:
  #         MYSQL_USER:          bmadrupal
  #         MYSQL_PASSWORD:      bmadrupal
 
-  mailcatcher:
-      image: jeanberu/mailcatcher
-      ports:
-          - "1080:1080"
+## mailcatcher:
+#     image: jeanberu/mailcatcher
+#     ports:
+#         - "1080:1080"
 
-  redis:
-      image: redis:3.2-alpine
-      ports:
-          - "6379:6379"
+# redis:
+#     image: redis:3.2-alpine
+#     ports:
+#         - "6379:6379"
